@@ -19,11 +19,11 @@ public class Suministra {
 	private int id;
 	
 	@ManyToOne
-	@JoinColumn(name = "codigoPieza")
+	@JoinColumn(name = "codigo_pieza")
 	private Pieza pieza;
 	
 	@ManyToOne
-	@JoinColumn(name = "idProveedor")
+	@JoinColumn(name = "id_proveedor")
 	private Proveedor proveedor;
 	
 	@Column(name = "precio")
