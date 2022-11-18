@@ -33,6 +33,14 @@ CREATE TABLE suministra (
   ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+CREATE TABLE usuario(
+	id int AUTO_INCREMENT,
+	username VARCHAR(100),
+    password VARCHAR(255),
+    role varchar(100),
+    PRIMARY KEY (id)
+);
+
 insert into piezas (nombre) values
 	("Pieza1"),
     ("Pieza2"),
@@ -68,3 +76,5 @@ insert into suministra (codigo_pieza, id_proveedor, precio) values
     (8, 8, 80),
     (9, 9, 90),
     (10, 10, 100);
+    
+INSERT INTO usuario (username, password, role) VALUES ('admin', '$2a$10$XURPShQNCsLjp1ESc2laoObo9QZDhxz73hJPaEv7/cBha4pk0AgP.','admin');
